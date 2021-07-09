@@ -54,7 +54,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":".\/files\/bensound-thelounge.mp3"
+                 "value":"src\/assets\/bensound-thelounge.mp3"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -77,7 +77,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":".\/files\/birds-singing.wav"
+                 "value":"src\/assets\/birds-singing.wav"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -581,7 +581,7 @@
         {
          "columns":16,
          "firstgid":1,
-         "image":"tiles\/[Base]BaseChip_pipo.png",
+         "image":"src\/assets\/[Base]BaseChip_pipo.png",
          "imageheight":2368,
          "imagewidth":512,
          "margin":0,
@@ -594,7 +594,7 @@
         {
          "columns":16,
          "firstgid":1185,
-         "image":"tiles\/6_Music_and_sport_32x32.png",
+         "image":"src\/assets\/6_Music_and_sport_32x32.png",
          "imageheight":928,
          "imagewidth":512,
          "margin":0,
@@ -607,7 +607,7 @@
         {
          "columns":16,
          "firstgid":1649,
-         "image":"tiles\/19_Hospital_32x32.png",
+         "image":"src\/assets\/19_Hospital_32x32.png",
          "imageheight":2496,
          "imagewidth":512,
          "margin":0,
@@ -620,7 +620,7 @@
         {
          "columns":6,
          "firstgid":2897,
-         "image":"tiles\/watileset.png",
+         "image":"src\/assets\/watileset.png",
          "imageheight":512,
          "imagewidth":192,
          "margin":0,
@@ -643,7 +643,7 @@
         {
          "columns":11,
          "firstgid":2993,
-         "image":"tiles\/tileset1.png",
+         "image":"src\/assets\/tileset1.png",
          "imageheight":352,
          "imagewidth":352,
          "margin":0,
@@ -656,7 +656,7 @@
         {
          "columns":13,
          "firstgid":3114,
-         "image":"tiles\/tileset_first_walls.png",
+         "image":"src\/assets\/tileset_first_walls.png",
          "imageheight":480,
          "imagewidth":416,
          "margin":0,
@@ -669,7 +669,7 @@
         {
          "columns":22,
          "firstgid":3309,
-         "image":"tiles\/office_interiors.png",
+         "image":"src\/assets\/office_interiors.png",
          "imageheight":768,
          "imagewidth":704,
          "margin":0,
@@ -682,7 +682,7 @@
         {
          "columns":16,
          "firstgid":3837,
-         "image":"tiles\/12_Kitchen_32x32.png",
+         "image":"src\/assets\/12_Kitchen_32x32.png",
          "imageheight":1568,
          "imagewidth":512,
          "margin":0,
@@ -695,7 +695,7 @@
         {
          "columns":16,
          "firstgid":4621,
-         "image":"tiles\/13_Conference_Hall_32x32.png",
+         "image":"src\/assets\/13_Conference_Hall_32x32.png",
          "imageheight":384,
          "imagewidth":512,
          "margin":0,
@@ -708,7 +708,7 @@
         {
          "columns":16,
          "firstgid":4813,
-         "image":"tiles\/14_Basement_32x32.png",
+         "image":"src\/assets\/14_Basement_32x32.png",
          "imageheight":1600,
          "imagewidth":512,
          "margin":0,
@@ -721,7 +721,7 @@
         {
          "columns":16,
          "firstgid":5613,
-         "image":"tiles\/1_Generic_32x32.png",
+         "image":"src\/assets\/1_Generic_32x32.png",
          "imageheight":1920,
          "imagewidth":512,
          "margin":0,
@@ -734,7 +734,7 @@
         {
          "columns":4,
          "firstgid":6573,
-         "image":"tiles\/info.png",
+         "image":"src\/assets\/info.png",
          "imageheight":64,
          "imagewidth":128,
          "margin":0,
