@@ -615,7 +615,7 @@
         {
          "name":"mapDescription",
          "type":"string",
-         "value":"Suitable up to 300 users.\n\nIf you want to organize a big virtual seminar this map is made for you! \nContains a conference room for more than 100 people, 9 debrief rooms and a cafeteria to relax."
+         "value":"Suitable for up to 300 users.\n\nIf you want to organize a big virtual seminar this map is made for you! \nContains a conference room for more than 100 people, 9 debrief rooms and a cafeteria to relax."
         }, 
         {
          "name":"mapImage",
