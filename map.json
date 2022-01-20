@@ -679,11 +679,6 @@
                  "point":true,
                  "properties":[
                         {
-                         "name":"default",
-                         "type":"string",
-                         "value":""
-                        }, 
-                        {
                          "name":"description",
                          "type":"string",
                          "value":"A room URL starts with \"\/@\/\""
