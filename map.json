@@ -752,7 +752,7 @@
         {
          "name":"mapLink",
          "type":"string",
-         "value":"https:\/\/valdotr.github.io\/big-webinar\/map.json"
+         "value":"https:\/\/valdotr.github.io\/big-hackaton\/map.json"
         }, 
         {
          "name":"mapName",
