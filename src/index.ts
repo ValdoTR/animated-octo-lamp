@@ -1,5 +1,8 @@
 /// <reference path="../node_modules/@workadventure/iframe-api-typings/iframe_api.d.ts" />
+import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
+// The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure.
+bootstrapExtra().catch(e => console.error(e));
 
 console.log('Script started successfully');
 
@@ -14,7 +17,7 @@ const config = [
             {
                 label: 'Meet us',
                 className: 'primary',
-                callback: () => WA.openTab('https://play.staging.workadventu.re/@/tcm/workadventure/wa-village'),
+                callback: () => WA.nav.openTab('https://play.staging.workadventu.re/@/tcm/workadventure/wa-village'),
             }
         ]
     },
@@ -25,12 +28,12 @@ const config = [
             {
                 label: 'LinkedIn',
                 className: 'primary',
-                callback: () => WA.openTab('https://www.linkedin.com/company/workadventu-re'),
+                callback: () => WA.nav.openTab('https://www.linkedin.com/company/workadventu-re'),
             },
             {
                 label: 'Twitter',
                 className: 'primary',
-                callback: () => WA.openTab('https://twitter.com/workadventure_'),
+                callback: () => WA.nav.openTab('https://twitter.com/workadventure_'),
             }
         ]
     },
@@ -48,6 +51,40 @@ WA.onEnterZone('followUs', () => {
 WA.onLeaveZone('needHelp', closePopup);
 WA.onLeaveZone('followUs', closePopup);
 
+WA.room.onEnterLayer('exitWest').subscribe(() => {
+    currentZone = 'exitWest'
+    const isDoorConfigured = WA.state.loadVariable(currentZone + 'URL')
+    if (isDoorConfigured) return;
+    openExitPopup()
+})
+WA.room.onLeaveLayer('exitWest').subscribe(closePopup)
+
+WA.room.onEnterLayer('exitSouth').subscribe(() => {
+    currentZone = 'exitSouth'
+    const isDoorConfigured = WA.state.loadVariable(currentZone + 'URL')
+    if (isDoorConfigured) return;
+    openExitPopup()
+})
+WA.room.onLeaveLayer('exitSouth').subscribe(closePopup)
+
+// Popup management functions
+function openExitPopup(): void {
+    const popupName = currentZone + 'Popup'
+    const variableName = currentZone + 'URL'
+
+    let cta = []
+    if (WA.player.tags.includes('editor')) {
+        cta.push({
+            label: 'Configure',
+            className: 'primary',
+            callback: () => WA.nav.openCoWebSite('https://workadventu.re')
+        })
+    }
+    // TODO: add WA.nav.openConfig(variableName)
+
+    // @ts-ignore otherwise we can't assign cta variable
+    currentPopup = WA.ui.openPopup(popupName, 'This exit is not configured yet.', cta)
+}
 
 function openPopup(zoneName: string, popupName: string) {
     const zone = config.find((item) => {
