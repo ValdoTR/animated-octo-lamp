@@ -306,10 +306,10 @@
   "resolved" "https://registry.npmjs.org/@workadventure/iframe-api-typings/-/iframe-api-typings-1.7.3.tgz"
   "version" "1.7.3"
 
-"@workadventure/scripting-api-extra@^1.2.0":
-  "integrity" "sha512-8cxDIHhVkmMq8R4YXkvOVXLV5B+DeydhydMznS6ocJiQQeB+xL0Uhaq8JenvXvYopSRXTX64bXA/NkMoQOcyUw=="
-  "resolved" "https://registry.npmjs.org/@workadventure/scripting-api-extra/-/scripting-api-extra-1.2.0.tgz"
-  "version" "1.2.0"
+"@workadventure/scripting-api-extra@^1.2.2":
+  "integrity" "sha512-Dx0URAAYAAbLMXxYSyGbrg8Fq/dEOyNCK2dNhnPwhWH6fZJkm1ntLxfKLO59SofHm0Cj1rIwBMcP7MqmBGljYQ=="
+  "resolved" "https://registry.npmjs.org/@workadventure/scripting-api-extra/-/scripting-api-extra-1.2.2.tgz"
+  "version" "1.2.2"
   dependencies:
     "@fontsource/press-start-2p" "^4.5.0"
     "@workadventure/tiled-map-type-guard" "^1.0.2"
