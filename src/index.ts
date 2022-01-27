@@ -6,6 +6,25 @@ bootstrapExtra().catch(e => console.error(e));
 
 console.log('Script started successfully');
 
+// Waiting for the API to be ready
+WA.onInit().then(() => {
+    console.log('Scripting API ready');
+    console.log('Player tags: ',WA.player.tags)
+
+    // Show configuration tile for editors only
+    if (WA.player.tags.includes('editor')) {
+        WA.room.showLayer('exitNorthConfig')
+        WA.room.showLayer('exitSouthConfig')
+        WA.room.showLayer('exitWestConfig')
+        WA.room.showLayer('exitEastConfig')
+    }
+
+    // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
+    bootstrapExtra().then(() => {
+        console.log('Scripting API Extra ready');
+    }).catch(e => console.error(e));
+}).catch(e => console.error(e));
+
 let currentZone: string;
 let currentPopup: any;
 
@@ -50,33 +69,6 @@ WA.onEnterZone('followUs', () => {
 });
 WA.onLeaveZone('needHelp', closePopup);
 WA.onLeaveZone('followUs', closePopup);
-
-WA.room.onEnterLayer('west').subscribe(() => {
-    currentZone = 'exitWest'
-    const isDoorConfigured = WA.state.loadVariable(currentZone + 'URL')
-    if (isDoorConfigured) return;
-    openExitPopup()
-})
-WA.room.onLeaveLayer('west').subscribe(closePopup)
-
-WA.room.onEnterLayer('south').subscribe(() => {
-    currentZone = 'exitSouth'
-    const isDoorConfigured = WA.state.loadVariable(currentZone + 'URL')
-    if (isDoorConfigured) return;
-    openExitPopup()
-})
-WA.room.onLeaveLayer('south').subscribe(closePopup)
-
-// Popup management functions
-function openExitPopup(): void {
-    const popupName = currentZone + 'Popup'
-    const variableName = currentZone + 'URL'
-
-    let cta: any[] = []
-
-    // @ts-ignore otherwise we can't assign cta variable
-    currentPopup = WA.ui.openPopup(popupName, 'This exit is not configured yet.', cta)
-}
 
 function openPopup(zoneName: string, popupName: string) {
     const zone = config.find((item) => {
